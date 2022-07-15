@@ -8,5 +8,3 @@ bs_obj = BeautifulSoup(html)
 
 for sibling in bs_obj.find("table", {"id":"giftList"}).tr:
     print(sibling)
-
-print("test")
