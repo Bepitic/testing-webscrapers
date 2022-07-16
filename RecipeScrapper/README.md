@@ -15,3 +15,4 @@
 #### Link-Manager:
 ![](./img/LinkManager.png)
 
+#### Worker-Manager:
