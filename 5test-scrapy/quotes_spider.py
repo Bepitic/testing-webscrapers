@@ -14,6 +14,7 @@ class QuotesSpider(scrapy.Spider):
                 'text': quote.css('span.text::text').get(),
             }
 
+        #Checking if the button for the next page exists
         next_page = response.css('li.next a::attr("href")').get()
         if next_page is not None:
             yield response.follow(next_page, self.parse)
