@@ -8,3 +8,4 @@
 //miFavoriteDiv[@class='big_class']
 
 - A cheatsheet: [xPath_CheatSheet](https://devhints.io/xpath)
+- A xpath tutorial: [xPath_Tutorial](https://coderslegacy.com/python/scrapy-xpath-tutorial/)
