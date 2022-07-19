@@ -4,7 +4,7 @@ import scrapy
 class QuotesSpider(scrapy.Spider):
     name = 'quotes'
     start_urls = [
-        'https://quotes.toscrape.com/tag/humor/',
+        'https://quotes.toscrape.com',
     ]
 
     def parse(self, response):
