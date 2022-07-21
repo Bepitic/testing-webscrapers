@@ -23,6 +23,14 @@ path/to/project/
 //miFavoriteDiv
 //miFavoriteDiv[@class='big_class']
 
+`to get the text //div/text()`
+- What is css and how to obtain properties?
+route to the node miFavoriteDiv
+miFavoriteDiv.big_class
+
+`to get the text div::text`
+`to get the href div::attr(href)`
+
 - A cheatsheet: [xPath_CheatSheet](https://devhints.io/xpath)
 - A xpath tutorial: [xPath_Tutorial](https://coderslegacy.com/python/scrapy-xpath-tutorial/)
 
