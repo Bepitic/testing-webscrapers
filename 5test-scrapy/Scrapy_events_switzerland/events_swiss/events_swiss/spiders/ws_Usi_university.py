@@ -16,7 +16,7 @@ class Usi_events(scrapy.Spider):
                 'day' : event.css("div.day::text").get(),
                 'month' : event.css("div.month::text").get(),
                 'year' : event.css("div.year::text").get(),
-                'link' : event.css("a::attr(href)").get(),
+                'link' : response.urljoin(event.css("a::attr(href)").get()),
             }
         next_page = response.css('li.pager-next a::attr(href)').get()
         if next_page is not None:
