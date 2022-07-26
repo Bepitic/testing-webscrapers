@@ -9,12 +9,13 @@ class BbcRecipesSpider(CrawlSpider):
     start_urls = ['http://www.bbcgoodfood.com/']
 
     rules = (
-        Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'recipes/',deny=r'recipes/collection/'), callback='parse_recipe', follow=True),
     )
 
-    def parse_item(self, response):
+    def parse_recipe(self, response):
         item = {}
-        #item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()
-        #item['name'] = response.xpath('//div[@id="name"]').get()
-        #item['description'] = response.xpath('//div[@id="description"]').get()
+        item['title'] = response.css('div.headline h1::text').get()
+        recipe = response.css('div.recipe__instructions').get()
+        item['ingredients'] = recipe.css('').get()
+        item['instrucctions'] = recipe.css('').get()
         return item
