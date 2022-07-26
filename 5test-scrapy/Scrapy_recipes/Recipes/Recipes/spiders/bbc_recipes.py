@@ -8,6 +8,7 @@ class BbcRecipesSpider(CrawlSpider):
     allowed_domains = ['www.bbcgoodfood.com']
     start_urls = ['http://www.bbcgoodfood.com/']
 
+    # TODO: Add a new rule 4 crawl everything of the page
     rules = (
         Rule(LinkExtractor(allow=r'recipes/',deny=r'recipes/collection/'), callback='parse_recipe', follow=True),
     )
