@@ -18,6 +18,7 @@ class BbcRecipesSpider(CrawlSpider):
         item = {}
         item['title'] = response.css('div.headline h1::text').get()
         recipe = response.css('div.recipe__instructions').get()
-        #item['ingredients'] = recipe.css('').get()
-        #item['instrucctions'] = recipe.css('').get()
+        item['ingredients'] = recipe.css('section.recipe__ingredients li::text').getall()
+        item['instrucctions'] = recipe.css('section.recipe__method-steps li ::text').getall()
         return item
+iii
