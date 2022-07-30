@@ -21,4 +21,3 @@ class BbcRecipesSpider(CrawlSpider):
         item['ingredients'] = recipe.css('section.recipe__ingredients li::text').getall()
         item['instrucctions'] = recipe.css('section.recipe__method-steps li ::text').getall()
         return item
-iii
